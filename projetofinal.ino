@@ -14,7 +14,7 @@ void setup() {
 }
 
 void loop() {
-   // Le os dados do pino analogico A0 do sensor
+   // Ler os dados do pino analogico A0 do sensor
   int valor_analogico = analogRead(pin_a0);
  
   if(valor_analogico > oxi){
@@ -28,5 +28,7 @@ void loop() {
    
    //Deixa a bomba ligado por 15 minutos   
       delay(900000);    
+    //Desligar o motor  
+      digitalWrite(pin_motor,LOW);
   }
 }
